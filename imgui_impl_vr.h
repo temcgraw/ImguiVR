@@ -44,6 +44,7 @@ IMGUI_API void		  ImGui_Impl_VR_TriggerHapticPulse(vr::TrackedDeviceIndex_t devi
 
 IMGUI_API ImVec2	  ImGui_Impl_VR_GetAxisPos(int i);
 IMGUI_API ImVec2	  ImGui_Impl_VR_GetAxisDragDelta(int i);
+IMGUI_API ImVec2	  ImGui_Impl_VR_GetTextureSize();
 
 IMGUI_API void		  ImGui_Impl_VR_GrabScreenshot();
 IMGUI_API void		  ImGui_Impl_VR_ShowKeyboard();
