@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="CGLRenderModel.cpp" />
+    <ClCompile Include="hellovr_opengl_main.cpp" />
+    <ClCompile Include="imgui_draw_3d.cpp" />
+    <ClCompile Include="InitShader.cpp" />
+    <ClCompile Include="Raycast.cpp" />
+    <ClCompile Include="include\imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="shared\Matrices.cpp" />
+    <ClCompile Include="imgui_impl_vr.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CGLRenderModel.h" />
+    <ClInclude Include="imgui_draw_3d.h" />
+    <ClInclude Include="InitShader.h" />
+    <ClInclude Include="Raycast.h" />
+    <ClInclude Include="include\imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui\stb_rect_pack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui\stb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui\stb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\Matrices.h" />
+    <ClInclude Include="shared\Vectors.h" />
+    <ClInclude Include="imgui_impl_vr.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ray_fs.glsl" />
+    <None Include="ray_vs.glsl" />
+    <None Include="gui_fs.glsl" />
+    <None Include="gui_vs.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{60959092-601e-47ea-a745-3fdd21bfc4bd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
