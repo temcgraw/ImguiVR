@@ -66,6 +66,11 @@ ImVec2 ImGui_Impl_VR_GetAxisDragDelta(int i)
 	return ImVec2(g_AxisPos[i].x-g_AxisClickedPos[i].x, g_AxisPos[i].y-g_AxisClickedPos[i].y);  //where is operator- ?
 }
 
+ImVec2 ImGui_Impl_VR_GetTextureSize()
+{
+   return ImVec2((float)g_TexWidth, (float)g_TexHeight);
+}
+
 void ImGui_Impl_VR_SetPinned(bool pinned)
 {
 	g_Pinned = pinned;
@@ -664,6 +669,14 @@ void ImGui_Impl_VR_NewFrame(int i)
 	if (!g_FontTexture)
 	{
 		ImGui_Impl_VR_CreateDeviceObjects();
+      //HACK this fixes the square block mouse cursor bug
+      for (int i = 0; i < g_MaxTextures; i++)
+      {
+         for (int c = 0; c < ImGuiMouseCursor_Count_; c++) 
+         {
+            g_Context[i]->MouseCursorData[c] = g_Context[0]->MouseCursorData[c];
+         }
+      }
 	}
 	else
 	{

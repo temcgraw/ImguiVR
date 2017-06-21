@@ -3,3 +3,7 @@ ImguiVR.VC.db
 *.filters
 *.tlog
 *.idb
+*.ipch
+*.opendb
+*.iobj
+*.ipdb

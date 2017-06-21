@@ -103,8 +103,11 @@ void Draw2dGui()
 	}
 
 	static int tab = 0;
+   const ImVec2 texsize = ImGui_Impl_VR_GetTextureSize();
 	ImGui_Impl_VR_NewFrame(0);
-	ImGui::Begin("Tab 0");
+   ImGui::SetNextWindowSize(texsize);
+   ImGui::SetNextWindowPos(ImVec2(0.0f, 0.0f));
+   ImGui::Begin("Tab 0", 0, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse);
 	bool t0 = ImGui::RadioButton("Tab 0", &tab, 0); ImGui::SameLine();
 	bool t1 = ImGui::RadioButton("1", &tab, 1); ImGui::SameLine();
 	bool t2 = ImGui::RadioButton("2", &tab, 2); ImGui::SameLine();
@@ -158,7 +161,9 @@ void Draw2dGui()
 	ImGui_Impl_VR_Render(0);
 
 	ImGui_Impl_VR_NewFrame(1);
-	ImGui::Begin("Tab 1");
+   ImGui::SetNextWindowSize(texsize);
+   ImGui::SetNextWindowPos(ImVec2(0.0f, 0.0f));
+   ImGui::Begin("Tab 1", 0, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse);
 	{
 	bool t0 = ImGui::RadioButton("Tab 0", &tab, 0); ImGui::SameLine();
 	bool t1 = ImGui::RadioButton("1", &tab, 1); ImGui::SameLine();
@@ -185,7 +190,9 @@ void Draw2dGui()
 	ImGui_Impl_VR_Render(1);
 
 	ImGui_Impl_VR_NewFrame(2);
-	ImGui::Begin("Tab 2");
+   ImGui::SetNextWindowSize(texsize);
+   ImGui::SetNextWindowPos(ImVec2(0.0f, 0.0f));
+   ImGui::Begin("Tab 2", 0, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse);
 	{
 		bool t0 = ImGui::RadioButton("Tab 0", &tab, 0); ImGui::SameLine();
 		bool t1 = ImGui::RadioButton("1", &tab, 1); ImGui::SameLine();
@@ -208,7 +215,9 @@ void Draw2dGui()
 
 
 	ImGui_Impl_VR_NewFrame(3);
-	ImGui::Begin("Tab 3");
+   ImGui::SetNextWindowSize(texsize);
+   ImGui::SetNextWindowPos(ImVec2(0.0f, 0.0f));
+   ImGui::Begin("Tab 3", 0, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse);
 	{
 		bool t0 = ImGui::RadioButton("Tab 0", &tab, 0); ImGui::SameLine();
 		bool t1 = ImGui::RadioButton("1", &tab, 1); ImGui::SameLine();
